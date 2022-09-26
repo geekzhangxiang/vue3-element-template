@@ -15,12 +15,10 @@
 <script>
 import { computed, onMounted, watch,reactive } from "vue";
 import { useStore } from "vuex";
-// import { Button } from "vant";
+
 export default {
   name: "message",
-  // components: {
-  //   Button,
-  // },
+ 
   props: {
     title: {
       type: String,
