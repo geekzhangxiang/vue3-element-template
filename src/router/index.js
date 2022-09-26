@@ -88,6 +88,7 @@ export const constantRoutes = [
       }
     ]
   },
+
   {
     path: '/guide',
     component: () => import('@/layout/index'),
@@ -101,6 +102,13 @@ export const constantRoutes = [
       }
     ]
   },
+  
+  
+
+
+
+
+
   {
     path: '/profile',
     component: () => import('@/layout/index'),
@@ -173,6 +181,19 @@ export const asyncRoutes = [
         component: () => import('@/views/icons/index'),
         name: 'Icons',
         meta: { title: '图标', icon: 'icon', noCache: true }
+      }
+    ]
+  },
+
+  {
+    path: '/showPropsComponent',
+    component: () => import('@/layout/index'),
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/showPropsComponent/parents'),
+        name: 'Icons',
+        meta: { title: '示例', icon: 'icon', noCache: true }
       }
     ]
   },
