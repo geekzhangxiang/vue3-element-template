@@ -176,6 +176,18 @@ export const asyncRoutes = [
       }
     ]
   },
+  {
+    path: '/showPropsComponent',
+    component: () => import('@/layout/index'),
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/showPropsComponent/index'),
+        name: 'ShowPropsComponent',
+        meta: { title: '示例', icon: 'icon', noCache: true }
+      }
+    ]
+  },
 
   /** when your routing map is too long, you can split it into small modules **/
   // componentsRouter,
