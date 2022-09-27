@@ -188,6 +188,24 @@ export const asyncRoutes = [
       }
     ]
   },
+  
+  {
+    path: '/gotoPage',
+    component: () => import('@/layout/index'),
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/gotoPage/index'),
+        name: 'gotoPage',
+        meta: { title: '示例2', icon: 'icon', noCache: true }
+      }
+    ]
+  },
+
+  
+
+
+
 
   /** when your routing map is too long, you can split it into small modules **/
   // componentsRouter,

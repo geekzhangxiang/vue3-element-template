@@ -15,13 +15,17 @@
 import Driver from 'driver.js' // import driver.js
 import 'driver.js/dist/driver.min.css' // import driver.js css
 import steps from './steps'
-
+import { useRouter } from "vue-router";
 export default {
   name: 'Guide',
-  data() {
+  data(){
     return {
       driver: null
     }
+  },
+  created(){
+    const router= useRouter();
+    console.log(router.currentRoute.value.query)
   },
   mounted() {
     this.driver = new Driver()

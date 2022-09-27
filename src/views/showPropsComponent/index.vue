@@ -6,6 +6,10 @@
   <div>
     <el-button type="success" @click="handlerClick">按钮触发事件</el-button>
   </div>
+
+  <div>
+    <el-button type="success" @click="gotoPage">路由跳转</el-button>
+  </div>
   <!-- <div>
     <Button type="success" @click="getDevice">发送到数据仓库的信息</Button>
     <div>{{device}}</div>
@@ -15,6 +19,7 @@
 <script setup>
 import { reactive, ref} from "vue"
 import message from "./children.vue"
+import { useRouter } from "vue-router";
 // import message from "./children.vue"
 
 let state= reactive({
@@ -39,6 +44,17 @@ const handlerClick=()=>{
    console.log("获取数据", comp.value.list)
 }
 // const store= useStore();
+const router= useRouter();
+
+const gotoPage=()=>{
+  router.push({
+    path: "/guide",
+    query:{
+      age: 26 
+    }
+  })
+}
+
 
 // let device= computed(()=> store.state.settings.device)
 // const getDevice=()=>{
